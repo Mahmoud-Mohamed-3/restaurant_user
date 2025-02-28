@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.RegisterPage, .LoginPage {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(36, 36, 36, 0.9)), to(rgba(48, 48, 48, 0.9)));
+  background-image: linear-gradient(to right, rgba(36, 36, 36, 0.9) 70%, rgba(48, 48, 48, 0.9) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.ResName {
+  position: absolute;
+  font-family: "Dancing Script", seirf;
+  font-size: 300px;
+  color: #ffbe33;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  -webkit-transform: translate(-50%, -50%) rotateZ(30deg);
+          transform: translate(-50%, -50%) rotateZ(30deg);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+@media (max-width: 991px) {
+  .ResName {
+    font-size: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .ResName {
+    font-size: 200px;
+  }
+}
+@media (max-width: 554px) {
+  .ResName {
+    font-size: 160px;
+  }
+}
+
+.Register, .Login {
+  width: 500px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 991px) {
+  .Register, .Login {
+    width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .Register, .Login {
+    width: 320px;
+  }
+}
+.Register h1, .Login h1 {
+  font-family: "Dancing Script", seirf;
+  font-size: 2.5rem;
+  color: #ffbe33;
+  text-align: center;
+  font-weight: bolder;
+}
+.Register .RegisterForm, .Register .LoginForm, .Login .RegisterForm, .Login .LoginForm {
+  margin-top: 15px;
+}
+.Register .RegisterForm .NameInputs, .Register .LoginForm .NameInputs, .Login .RegisterForm .NameInputs, .Login .LoginForm .NameInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+.Register .RegisterForm label, .Register .LoginForm label, .Login .RegisterForm label, .Login .LoginForm label {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.Register .RegisterForm input, .Register .LoginForm input, .Login .RegisterForm input, .Login .LoginForm input {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 1px solid #ffbe33;
+  color: white;
+}
+.Register .RegisterForm input:focus, .Register .LoginForm input:focus, .Login .RegisterForm input:focus, .Login .LoginForm input:focus {
+  outline: none;
+}
+.Register .RegisterForm input:focus-within, .Register .LoginForm input:focus-within, .Login .RegisterForm input:focus-within, .Login .LoginForm input:focus-within {
+  outline: none;
+  border-bottom: 1px solid #ffbe33;
+}
+.Register .RegisterForm input:active, .Register .LoginForm input:active, .Login .RegisterForm input:active, .Login .LoginForm input:active {
+  border-bottom: 1px solid #ffbe33;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.Register .RegisterForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined, .Register .LoginForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined, .Login .RegisterForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined, .Login .LoginForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 1px solid #ffbe33;
+  color: white;
+}
+.Register .RegisterForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus, .Register .LoginForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus, .Login .RegisterForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus, .Login .LoginForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus {
+  outline: none;
+}
+.Register .RegisterForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus-within, .Register .LoginForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus-within, .Login .RegisterForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus-within, .Login .LoginForm :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined:focus-within {
+  outline: none;
+  border-bottom: 1px solid #ffbe33;
+}
+.Register .RegisterForm .RegisterButton, .Register .RegisterForm .LoginButton, .Register .LoginForm .RegisterButton, .Register .LoginForm .LoginButton, .Login .RegisterForm .RegisterButton, .Login .RegisterForm .LoginButton, .Login .LoginForm .RegisterButton, .Login .LoginForm .LoginButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Dancing Script", seirf;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 30px;
+  border: none;
+  background-color: #ffbe33;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 0 auto;
+}
+.Register .RegisterForm .RegisterButton:hover, .Register .RegisterForm .LoginButton:hover, .Register .LoginForm .RegisterButton:hover, .Register .LoginForm .LoginButton:hover, .Login .RegisterForm .RegisterButton:hover, .Login .RegisterForm .LoginButton:hover, .Login .LoginForm .RegisterButton:hover, .Login .LoginForm .LoginButton:hover {
+  background-color: #ffae00;
+}
+.Register a, .Login a {
+  color: #ffbe33;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.Register a:hover, .Login a:hover {
+  text-decoration: underline;
+}
+
+:where(.css-dev-only-do-not-override-1v613y0).ant-input-affix-wrapper > input.ant-input {
+  background-color: rgba(255, 255, 255, 0.001);
+  border: none;
+}
+:where(.css-dev-only-do-not-override-1v613y0).ant-input-affix-wrapper > input.ant-input:focus {
+  outline: none;
+  border: none;
+}
+
+:where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined.ant-input-status-error:not(.ant-input-disabled):focus-within {
+  background-color: rgba(255, 255, 255, 0.1);
+}

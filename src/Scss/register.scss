@@ -1,0 +1,173 @@
+@use "variables" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.RegisterPage, .LoginPage {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    rgba(36, 36, 36, 0.9) 70%,
+    rgba(48, 48, 48, 0.9) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.ResName {
+  position: absolute;
+  font-family: $main_font_family;
+  font-size: 300px;
+  color: $main_color;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  transform: translate(-50%, -50%) rotateZ(30deg);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+    @media (max-width: 991px) {
+        font-size: 250px;
+    }
+  @media (max-width: 768px) {
+    font-size: 200px;
+  }
+  @media (max-width: 554px) {
+    font-size: 160px;
+  }
+
+}
+.Register , .Login {
+  width: 500px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+@media (max-width: 991px) {
+  width: 400px;
+}
+@media (max-width: 768px) {
+  width: 320px;
+}
+  h1 {
+    font-family: $main_font_family;
+    font-size: 2.5rem;
+    color: $main_color;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .RegisterForm ,.LoginForm {
+    margin-top: 15px;
+
+    .NameInputs {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    label {
+      color: #fff;
+      font-family: $second_font_family;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    input {
+      font-family: $second_font_family;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-bottom: 1px solid $main_color;
+      color: white;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-within {
+        outline: none;
+        border-bottom: 1px solid $main_color;
+      }
+
+      &:active {
+        border-bottom: 1px solid $main_color;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    :where(.css-dev-only-do-not-override-1v613y0).ant-input-outlined {
+      font-family: $second_font_family;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-bottom: 1px solid $main_color;
+      color: white;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-within {
+        outline: none;
+        border-bottom: 1px solid $main_color;
+      }
+    }
+
+    .RegisterButton,.LoginButton {
+      display: flex;
+      justify-content: center;
+      font-family: $main_font_family;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 10px 30px;
+      border: none;
+      background-color: $main_color;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken($main_color, 10%);
+      }
+    }
+  }
+  a {
+    color: $main_color;
+    text-decoration: none;
+    font-family: $second_font_family;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    transition: .3s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+:where(.css-dev-only-do-not-override-1v613y0).ant-input-affix-wrapper
+  > input.ant-input {
+  background-color: rgba(255, 255, 255, 0.001);
+  border: none;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+:where(
+    .css-dev-only-do-not-override-1v613y0
+  ).ant-input-outlined.ant-input-status-error:not(
+    .ant-input-disabled
+  ):focus-within {
+  background-color: rgba(255, 255, 255, 0.1);
+}
