@@ -25,7 +25,7 @@
 
 .ResName {
   position: absolute;
-  font-family: "Dancing Script", seirf;
+  font-family: "Dancing Script", cursive;
   font-size: 300px;
   color: #ffbe33;
   text-align: center;
@@ -77,7 +77,7 @@
   }
 }
 .Register h1, .Login h1 {
-  font-family: "Dancing Script", seirf;
+  font-family: "Dancing Script", cursive;
   font-size: 2.5rem;
   color: #ffbe33;
   text-align: center;
@@ -140,7 +140,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Dancing Script", seirf;
+  font-family: "Dancing Script", cursive;
   font-size: 1.5rem;
   font-weight: 700;
   padding: 10px 30px;

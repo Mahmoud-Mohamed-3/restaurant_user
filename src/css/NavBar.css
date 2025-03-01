@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+.Container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: rgb(48, 48, 48);
+}
+.Container nav {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 1400px) {
+  .Container nav {
+    width: 1200px;
+  }
+}
+@media (max-width: 1200px) {
+  .Container nav {
+    width: 1100px;
+  }
+}
+@media (max-width: 991px) {
+  .Container nav {
+    width: 900px;
+  }
+}
+@media (max-width: 768px) {
+  .Container nav {
+    width: 700px;
+  }
+}
+.Container nav .Logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.Container nav .Logo:hover {
+  color: #ffbe33;
+}
+.Container nav .NavLinks {
+  width: 25%;
+  margin: 0 auto;
+  margin-left: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Container nav .NavButtons {
+  font-size: 20px;
+  margin: 0 auto;
+}
+.Container nav .OrderButton {
+  background-color: #ffbe33;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.Container nav .OrderButton:hover {
+  background-color: #ffae00;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 1rem;
+}
+a:hover {
+  color: #ffbe33;
+}

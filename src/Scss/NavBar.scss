@@ -1,0 +1,79 @@
+@use "variables" as *;
+.Container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: $black_color_bg;
+  nav {
+    margin: 0 auto;
+    @media (min-width: 1400px) {
+      width: 1200px;
+    }
+    @media (max-width: 1200px) {
+      width: 1100px;
+    }
+    @media (max-width: 991px) {
+      width: 900px;
+    }
+    @media (max-width: 768px) {
+      width: 700px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Logo {
+      font-family: $main_font_family;
+      font-size: 4rem;
+      color: #fff;
+      font-weight: bolder;
+      text-decoration: none;
+      &:hover {
+        color: $main_color;
+      }
+    }
+    .NavLinks {
+      //width: 26%;
+      //margin: 0 auto;
+      width: 25%;
+      margin: 0 auto;
+      margin-left: 215px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .NavButtons {
+      font-size: 20px;
+      margin: 0 auto;
+    }
+    .OrderButton {
+      background-color: $main_color;
+      padding: 10px 20px;
+      border: none;
+      color: #fff;
+      font-family: $second_font_family;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-radius: 12px;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($main_color, 10%);
+      }
+    }
+  }
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: $second_font_family;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 1rem;
+  &:hover {
+    color: $main_color;
+  }
+}

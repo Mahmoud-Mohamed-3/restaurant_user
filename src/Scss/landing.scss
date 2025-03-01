@@ -1,0 +1,205 @@
+@use "variables" as *;
+//.LandingPage {
+//  height: calc(100vh - 97px);
+//  overflow: hidden;
+//
+//  .Carousel {
+//    width: 100%;
+//    height: 100%;
+//    display: flex;
+//    margin: 0 auto;
+//
+//    .CarouselImage {
+//      width: 100%;
+//      height: 100%;
+//      margin: 0 auto;
+//      position: relative;
+//
+//      img {
+//        width: 100vw;
+//        height: 100vh;
+//        object-fit: cover;
+//        position: absolute;
+//        top: 0;
+//        left: 0;
+//      }
+//    }
+//  }
+//}\\\\
+
+
+
+
+.LandingPage {
+  height: calc(100vh - 97px);
+  overflow: hidden;
+  background-color: #242424;
+
+  .Carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .CarouselImage {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      .PrevButton,
+      .NextButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 10;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.8);
+        }
+      }
+
+      .PrevButton {
+        left: 10px;
+      }
+
+      .NextButton {
+        right: 10px;
+      }
+
+      .ImageContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .ImageWrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .Slide {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .Caption {
+      position: absolute;
+      //bottom: 50px;
+      //left: 50%;
+      //transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      z-index: 20;
+
+      h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        font-family: $main_font_family;
+        color: $main_color;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-family: $second_font_family;
+        width: 500px;
+        line-height: 2;
+      }
+
+      button {
+        background: #ff5722;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &:hover {
+          background: #e64a19;
+        }
+      }
+    }
+  }
+}
+
+
+
+.Carousel {
+  position: relative;
+}
+
+.ImageContainer {
+  position: relative;
+}
+
+.DotsNavigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Dot.active {
+  background-color:$main_color;
+}
+
+.Caption {
+  position: absolute;
+  color: white;
+}
+.caption-0{
+top: 50%;
+  right: 2%;
+transform: translate(-50%, -50%);
+}
+.caption-1{
+  top : 50%;
+  left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caption-2{
+  top: 44%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
