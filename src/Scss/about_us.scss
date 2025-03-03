@@ -1,0 +1,154 @@
+@use "variables" as *;
+//.MainContainer{
+//  width: 100%;
+//  .Container {
+//    background-color: transparent;
+//    margin: 0 auto;
+//    @media (min-width: 1400px) {
+//      width: 1200px;
+//    }
+//    @media (max-width: 1200px) {
+//      width: 1100px;
+//    }
+//    @media (max-width: 991px) {
+//      width: 900px;
+//    }
+//    @media (max-width: 768px) {
+//      width: 700px;
+//    }
+//  }
+//  h1 {
+//    font-size: 3rem;
+//    font-family: $main_font_family;
+//    text-align: center;
+//    margin: 50px 0;
+//  }
+//}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* About Us Section */
+.AboutUsSection {
+  //margin-bottom: 80px; /* Space for the following categories */
+  padding: 40px 20px 0;
+  background-color: #f9f9f9;
+}
+
+/* Introduction Section */
+.AboutUsContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Title {
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  font-family: $main_font_family;
+}
+
+.AboutUsContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.ImageContainer {
+  flex: 1;
+}
+
+.RestaurantImage {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.Text {
+  flex: 2;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: $second_font_family;
+}
+
+/* Core Values Section */
+.CoreValuesSection {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.CoreValuesSection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+    font-family: $main_font_family;
+}
+
+.CoreValuesList {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.CoreValue {
+  flex: 1;
+  text-align: center;
+
+}
+
+.CoreValue i {
+  font-size: 3rem;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.CoreValue h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+    font-family: $main_font_family;
+}
+
+.CoreValue p {
+  font-size: 1rem;
+  color: #666;
+  font-family: $second_font_family;
+}
+
+/* Call to Action Section */
+.CTASection {
+  background-color: #ff6600;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.CTASection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #e65c00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #cc5200;
+}

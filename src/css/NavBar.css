@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  scroll-behavior: smooth;
+}
+
 .Container {
   width: 100%;
   margin: 0 auto;
@@ -49,7 +54,7 @@
   color: #ffbe33;
 }
 .Container nav .NavLinks {
-  width: 25%;
+  width: 35%;
   margin: 0 auto;
   margin-left: 215px;
   display: -webkit-box;

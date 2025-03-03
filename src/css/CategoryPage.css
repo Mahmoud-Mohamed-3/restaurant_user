@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.CategoryPage {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.CategoryPage .CategoryName {
+  padding-bottom: 20px;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.CategoryPage .CategoryName:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  top: 82%;
+  left: 57%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23ccc%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%20367.339%20367.34%22%20xml%3Aspace%3D%22preserve%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%20-1%2C%200%2C%200)%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cg%3E%3Cpath%20d%3D%22M337.591%2C0.932c-13.464%2C6.12-26.315%2C12.852-39.168%2C20.196c-11.628%2C6.12-25.704%2C12.24-35.496%2C21.42%20c-5.508%2C4.896%2C0%2C15.3%2C7.344%2C12.852c0%2C0%2C0.612%2C0%2C0.612-0.612c1.836%2C1.224%2C3.061%2C2.448%2C4.896%2C4.284c0%2C0.612%2C0.611%2C1.836%2C0.611%2C2.448%20c0.612%2C1.224%2C1.836%2C2.448%2C3.061%2C3.672c-17.748%2C33.048-34.272%2C66.096-55.08%2C96.696c-6.12%2C9.18-12.853%2C17.748-20.808%2C25.704%20c-19.584-31.212-51.409-67.32-89.965-60.588c-50.796%2C9.18-23.256%2C63.647%2C3.06%2C82.008c31.212%2C22.644%2C58.14%2C21.42%2C85.068%2C0%20c12.24%2C20.808%2C20.809%2C44.063%2C19.584%2C66.708c-1.836%2C54.468-50.796%2C63.647-91.8%2C49.571c6.12-15.912%2C7.956-34.271%2C4.284-50.184%20c-6.12-28.764-50.184-54.468-75.888-34.272c-25.092%2C20.196%2C22.032%2C71.604%2C37.332%2C82.009c4.284%2C3.06%2C9.18%2C6.119%2C14.076%2C8.567%20c-0.612%2C0.612-0.612%2C1.225-1.224%2C1.836c-28.152%2C44.064-65.484%2C6.12-82.62-25.092c-2.448-4.896-9.18-0.612-7.344%2C4.284%20c14.076%2C32.436%2C42.84%2C70.38%2C81.396%2C48.348c9.18-5.508%2C17.136-13.464%2C22.644-23.256c33.66%2C13.464%2C72.829%2C13.464%2C97.308-17.136%20c29.376-36.72%2C11.017-84.456-8.567-119.952c0.611-0.612%2C0.611-0.612%2C1.224-1.224c34.884-33.66%2C56.304-81.396%2C78.336-124.236%20c4.284%2C3.06%2C9.181%2C6.12%2C13.464%2C9.18c3.061%2C1.836%2C7.345%2C1.224%2C9.792-1.224c17.748-20.808%2C31.212-45.9%2C35.496-73.44%20C351.055%2C2.768%2C344.324-2.128%2C337.591%2C0.932z%20M178.471%2C207.787c-23.256%2C13.464-46.512-3.06-63.648-18.972%20c-22.644-20.808-16.524-54.468%2C18.36-47.735c17.748%2C3.672%2C31.824%2C19.584%2C43.452%2C32.436c6.12%2C6.732%2C12.241%2C14.687%2C17.749%2C23.255%20C189.488%2C201.056%2C183.979%2C204.728%2C178.471%2C207.787z%20M116.047%2C319.171C116.047%2C319.171%2C115.435%2C319.171%2C116.047%2C319.171%20c-16.524-8.567-28.764-20.808-38.556-36.107c-4.284-6.732-7.956-14.076-9.792-22.032c-6.12-20.808%2C26.928-10.404%2C35.496-6.12%20C126.451%2C267.764%2C124.615%2C297.14%2C116.047%2C319.171z%20M306.379%2C67.028c-0.612%2C0-0.612-0.612-1.224-0.612%20c0-1.836-1.225-3.672-3.672-4.896c-4.284-1.836-8.568-4.284-12.853-6.732c-1.836-1.224-5.508-4.896-5.508-3.672%20c0-0.612-0.612-1.224-1.224-1.224c6.731-3.672%2C13.464-8.568%2C20.195-12.24c8.568-4.896%2C17.748-9.792%2C26.929-14.688%20C324.74%2C38.264%2C316.784%2C53.564%2C306.379%2C67.028z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+.CategoryPage .CategoryName:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  top: 84%;
+  left: 44%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23ccc%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%20367.339%20367.34%22%20xml%3Aspace%3D%22preserve%22%20transform%3D%22matrix(-1%2C%200%2C%200%2C%20-1%2C%200%2C%200)%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke%3D%22%23CCCCCC%22%20stroke-width%3D%220.7346779999999999%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cg%3E%3Cpath%20d%3D%22M337.591%2C0.932c-13.464%2C6.12-26.315%2C12.852-39.168%2C20.196c-11.628%2C6.12-25.704%2C12.24-35.496%2C21.42%20c-5.508%2C4.896%2C0%2C15.3%2C7.344%2C12.852c0%2C0%2C0.612%2C0%2C0.612-0.612c1.836%2C1.224%2C3.061%2C2.448%2C4.896%2C4.284c0%2C0.612%2C0.611%2C1.836%2C0.611%2C2.448%20c0.612%2C1.224%2C1.836%2C2.448%2C3.061%2C3.672c-17.748%2C33.048-34.272%2C66.096-55.08%2C96.696c-6.12%2C9.18-12.853%2C17.748-20.808%2C25.704%20c-19.584-31.212-51.409-67.32-89.965-60.588c-50.796%2C9.18-23.256%2C63.647%2C3.06%2C82.008c31.212%2C22.644%2C58.14%2C21.42%2C85.068%2C0%20c12.24%2C20.808%2C20.809%2C44.063%2C19.584%2C66.708c-1.836%2C54.468-50.796%2C63.647-91.8%2C49.571c6.12-15.912%2C7.956-34.271%2C4.284-50.184%20c-6.12-28.764-50.184-54.468-75.888-34.272c-25.092%2C20.196%2C22.032%2C71.604%2C37.332%2C82.009c4.284%2C3.06%2C9.18%2C6.119%2C14.076%2C8.567%20c-0.612%2C0.612-0.612%2C1.225-1.224%2C1.836c-28.152%2C44.064-65.484%2C6.12-82.62-25.092c-2.448-4.896-9.18-0.612-7.344%2C4.284%20c14.076%2C32.436%2C42.84%2C70.38%2C81.396%2C48.348c9.18-5.508%2C17.136-13.464%2C22.644-23.256c33.66%2C13.464%2C72.829%2C13.464%2C97.308-17.136%20c29.376-36.72%2C11.017-84.456-8.567-119.952c0.611-0.612%2C0.611-0.612%2C1.224-1.224c34.884-33.66%2C56.304-81.396%2C78.336-124.236%20c4.284%2C3.06%2C9.181%2C6.12%2C13.464%2C9.18c3.061%2C1.836%2C7.345%2C1.224%2C9.792-1.224c17.748-20.808%2C31.212-45.9%2C35.496-73.44%20C351.055%2C2.768%2C344.324-2.128%2C337.591%2C0.932z%20M178.471%2C207.787c-23.256%2C13.464-46.512-3.06-63.648-18.972%20c-22.644-20.808-16.524-54.468%2C18.36-47.735c17.748%2C3.672%2C31.824%2C19.584%2C43.452%2C32.436c6.12%2C6.732%2C12.241%2C14.687%2C17.749%2C23.255%20C189.488%2C201.056%2C183.979%2C204.728%2C178.471%2C207.787z%20M116.047%2C319.171C116.047%2C319.171%2C115.435%2C319.171%2C116.047%2C319.171%20c-16.524-8.567-28.764-20.808-38.556-36.107c-4.284-6.732-7.956-14.076-9.792-22.032c-6.12-20.808%2C26.928-10.404%2C35.496-6.12%20C126.451%2C267.764%2C124.615%2C297.14%2C116.047%2C319.171z%20M306.379%2C67.028c-0.612%2C0-0.612-0.612-1.224-0.612%20c0-1.836-1.225-3.672-3.672-4.896c-4.284-1.836-8.568-4.284-12.853-6.732c-1.836-1.224-5.508-4.896-5.508-3.672%20c0-0.612-0.612-1.224-1.224-1.224c6.731-3.672%2C13.464-8.568%2C20.195-12.24c8.568-4.896%2C17.748-9.792%2C26.929-14.688%20C324.74%2C38.264%2C316.784%2C53.564%2C306.379%2C67.028z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+.CategoryPage .CategoryDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 70px;
+  border-bottom: 1px solid #ccc;
+}
+.CategoryPage .CategoryDetails .CategoryImage {
+  width: 280px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 16px;
+  position: relative;
+}
+.CategoryPage .CategoryDetails .CategoryImage img {
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CategoryPage .CategoryDetails .Details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+}
+.CategoryPage .CategoryDetails .Details .CategoryTitle {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+  margin-bottom: 10px;
+  position: relative;
+}
+.CategoryPage .CategoryDetails .Details .CategoryDescription {
+  font-size: 1.1rem;
+  color: #777;
+  margin-left: 20px;
+  max-width: 500px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.CategoryPage .FoodsSplitter {
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+  text-align: center;
+  position: relative;
+}
+.CategoryPage .FoodsSplitter:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  top: 123%;
+  left: 49%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23ccc%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%20367.339%20367.34%22%20xml%3Aspace%3D%22preserve%22%20transform%3D%22matrix(-1%2C%200%2C%200%2C%20-1%2C%200%2C%200)%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke%3D%22%23CCCCCC%22%20stroke-width%3D%220.7346779999999999%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cg%3E%3Cpath%20d%3D%22M337.591%2C0.932c-13.464%2C6.12-26.315%2C12.852-39.168%2C20.196c-11.628%2C6.12-25.704%2C12.24-35.496%2C21.42%20c-5.508%2C4.896%2C0%2C15.3%2C7.344%2C12.852c0%2C0%2C0.612%2C0%2C0.612-0.612c1.836%2C1.224%2C3.061%2C2.448%2C4.896%2C4.284c0%2C0.612%2C0.611%2C1.836%2C0.611%2C2.448%20c0.612%2C1.224%2C1.836%2C2.448%2C3.061%2C3.672c-17.748%2C33.048-34.272%2C66.096-55.08%2C96.696c-6.12%2C9.18-12.853%2C17.748-20.808%2C25.704%20c-19.584-31.212-51.409-67.32-89.965-60.588c-50.796%2C9.18-23.256%2C63.647%2C3.06%2C82.008c31.212%2C22.644%2C58.14%2C21.42%2C85.068%2C0%20c12.24%2C20.808%2C20.809%2C44.063%2C19.584%2C66.708c-1.836%2C54.468-50.796%2C63.647-91.8%2C49.571c6.12-15.912%2C7.956-34.271%2C4.284-50.184%20c-6.12-28.764-50.184-54.468-75.888-34.272c-25.092%2C20.196%2C22.032%2C71.604%2C37.332%2C82.009c4.284%2C3.06%2C9.18%2C6.119%2C14.076%2C8.567%20c-0.612%2C0.612-0.612%2C1.225-1.224%2C1.836c-28.152%2C44.064-65.484%2C6.12-82.62-25.092c-2.448-4.896-9.18-0.612-7.344%2C4.284%20c14.076%2C32.436%2C42.84%2C70.38%2C81.396%2C48.348c9.18-5.508%2C17.136-13.464%2C22.644-23.256c33.66%2C13.464%2C72.829%2C13.464%2C97.308-17.136%20c29.376-36.72%2C11.017-84.456-8.567-119.952c0.611-0.612%2C0.611-0.612%2C1.224-1.224c34.884-33.66%2C56.304-81.396%2C78.336-124.236%20c4.284%2C3.06%2C9.181%2C6.12%2C13.464%2C9.18c3.061%2C1.836%2C7.345%2C1.224%2C9.792-1.224c17.748-20.808%2C31.212-45.9%2C35.496-73.44%20C351.055%2C2.768%2C344.324-2.128%2C337.591%2C0.932z%20M178.471%2C207.787c-23.256%2C13.464-46.512-3.06-63.648-18.972%20c-22.644-20.808-16.524-54.468%2C18.36-47.735c17.748%2C3.672%2C31.824%2C19.584%2C43.452%2C32.436c6.12%2C6.732%2C12.241%2C14.687%2C17.749%2C23.255%20C189.488%2C201.056%2C183.979%2C204.728%2C178.471%2C207.787z%20M116.047%2C319.171C116.047%2C319.171%2C115.435%2C319.171%2C116.047%2C319.171%20c-16.524-8.567-28.764-20.808-38.556-36.107c-4.284-6.732-7.956-14.076-9.792-22.032c-6.12-20.808%2C26.928-10.404%2C35.496-6.12%20C126.451%2C267.764%2C124.615%2C297.14%2C116.047%2C319.171z%20M306.379%2C67.028c-0.612%2C0-0.612-0.612-1.224-0.612%20c0-1.836-1.225-3.672-3.672-4.896c-4.284-1.836-8.568-4.284-12.853-6.732c-1.836-1.224-5.508-4.896-5.508-3.672%20c0-0.612-0.612-1.224-1.224-1.224c6.731-3.672%2C13.464-8.568%2C20.195-12.24c8.568-4.896%2C17.748-9.792%2C26.929-14.688%20C324.74%2C38.264%2C316.784%2C53.564%2C306.379%2C67.028z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+.CategoryPage .FoodCardsContainer {
+  width: 100%;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  padding: 50px 20px;
+  justify-items: center;
+  margin: 40px auto;
+  gap: 20px;
+}
+@media (min-width: 1400px) {
+  .CategoryPage .FoodCardsContainer .FoodGrid {
+    width: 1200px;
+  }
+}
+@media (max-width: 1200px) {
+  .CategoryPage .FoodCardsContainer .FoodGrid {
+    width: 1100px;
+  }
+}
+@media (max-width: 991px) {
+  .CategoryPage .FoodCardsContainer .FoodGrid {
+    width: 900px;
+  }
+}
+@media (max-width: 768px) {
+  .CategoryPage .FoodCardsContainer .FoodGrid {
+    width: 700px;
+  }
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  cursor: none;
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+          box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .ImageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  width: 300px;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .ImageContainer img {
+  max-width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .card-body {
+  padding: 20px;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .card-body h3 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+  color: #ff6600;
+  font-family: "Dancing Script", cursive;
+  margin-top: 0;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .card-body p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 7px;
+  font-family: "Open Sans", sans-serif;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .card-body .Price {
+  font-size: 1.5rem;
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .card-body .OrderButton {
+  background-color: #ff6600;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  cursor: none;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard .card-body .OrderButton:hover {
+  background-color: #cc5200;
+}
+.CategoryPage .FoodCardsContainer .FoodGrid .FoodCard:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}

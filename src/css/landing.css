@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .LandingPage {
   height: calc(100vh - 97px);
   overflow: hidden;
@@ -105,7 +106,7 @@
   line-height: 2;
 }
 .LandingPage .Carousel .Caption button {
-  background: #ff5722;
+  background: #ff6600;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -114,18 +115,9 @@
   border-radius: 5px;
 }
 .LandingPage .Carousel .Caption button:hover {
-  background: #e64a19;
+  background: #ffbe33;
 }
-
-.Carousel {
-  position: relative;
-}
-
-.ImageContainer {
-  position: relative;
-}
-
-.DotsNavigation {
+.LandingPage .Carousel .DotsNavigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,8 +131,7 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-
-.Dot {
+.LandingPage .Carousel .Dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -150,31 +141,22 @@
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-
-.Dot.active {
+.LandingPage .Carousel .Dot.active {
   background-color: #ffbe33;
 }
-
-.Caption {
-  position: absolute;
-  color: white;
-}
-
-.caption-0 {
+.LandingPage .Carousel .caption-0 {
   top: 50%;
   right: 2%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-
-.caption-1 {
+.LandingPage .Carousel .caption-1 {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-
-.caption-2 {
+.LandingPage .Carousel .caption-2 {
   top: 44%;
   left: 20%;
   -webkit-transform: translate(-50%, -50%);

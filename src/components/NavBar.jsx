@@ -6,40 +6,53 @@ import {
 } from "@ant-design/icons";
 import "../css/NavBar.css";
 
-export default function NavBar() {
+export default function NavBar({ onMenuClick }) {
+  // Memoize the links to avoid unnecessary re-renders (optional in this case but useful for larger components)
+  const navigationLinks = [
+    { to: "/", label: "Home" },
+    { to: "#menu", label: "Menu", onClick: onMenuClick }, // Trigger scroll on click
+    { to: "#", label: "Book Table" },
+    { to: "#", label: "Contact Us" },
+  ];
+
+  const iconLinks = [
+    { to: "#", icon: <UserOutlined />, label: "User" },
+    { to: "#", icon: <ShoppingCartOutlined />, label: "Cart" },
+    { to: "#", icon: <SearchOutlined />, label: "Search" },
+  ];
+
   return (
-    <div className={"Container"}>
+    <div className="Container">
       <nav>
-        <div className={"Logo"}>feane</div>
-        <ul className={"NavLinks"}>
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Menu</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Book Table</Link>
-          </li>
+        {/* Logo Section */}
+        <div className="Logo" aria-label="Website Logo">
+          feane
+        </div>
+
+        {/* Navigation Links */}
+        <ul className="NavLinks">
+          {navigationLinks.map(({ to, label, onClick }) => (
+            <li key={label}>
+              <Link to={to} onClick={onClick} aria-label={label}>
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <ul className={"NavButtons"}>
-          <li>
-            <Link to={"#"}>
-              <UserOutlined />
-            </Link>
-          </li>
-          <li>
-            <Link to={"#"}>
-              <ShoppingCartOutlined />
-            </Link>
-          </li>
-          <li>
-            <Link to={"#"}>
-              <SearchOutlined />
-            </Link>
-          </li>
+
+        <ul className="NavButtons">
+          {iconLinks.map(({ to, icon, label }) => (
+            <li key={label}>
+              <Link to={to} aria-label={label}>
+                {icon}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <button className={"OrderButton"}>Order Online</button>
+
+        <button className="OrderButton" aria-label="Order Online">
+          Order Online
+        </button>
       </nav>
     </div>
   );

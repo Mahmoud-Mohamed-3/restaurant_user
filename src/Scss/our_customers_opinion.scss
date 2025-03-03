@@ -1,0 +1,69 @@
+@use "variables" as *;
+.OurCustomersOpinion {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #f4f4f4;
+  overflow: hidden; /* Prevents overflow outside of the container */
+}
+
+.SectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for the opinions */
+.OpinionsContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide the overflowing content */
+}
+
+.OpinionsMarquee {
+  display: flex;
+  animation: scrollLeft 14s linear infinite;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+/* Each individual opinion card */
+.OpinionCard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.OpinionCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+}
+
+/* Opinion Info */
+.OpinionInfo h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: $main_font_family;
+  color: $main_color;
+}
+
+.OpinionText {
+  font-size: 1rem;
+  color: #666;
+  font-family: $second_font_family;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* About Us Section */
+.AboutUsSection {
+  padding: 40px 20px 0;
+  background-color: #f9f9f9;
+}
+
+/* Introduction Section */
+.AboutUsContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Title {
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  font-family: "Dancing Script", cursive;
+}
+
+.AboutUsContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.ImageContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.RestaurantImage {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Core Values Section */
+.CoreValuesSection {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.CoreValuesSection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-family: "Dancing Script", cursive;
+}
+
+.CoreValuesList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.CoreValue {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.CoreValue i {
+  font-size: 3rem;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.CoreValue h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+}
+
+.CoreValue p {
+  font-size: 1rem;
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Call to Action Section */
+.CTASection {
+  background-color: #ff6600;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.CTASection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #e65c00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #cc5200;
+}

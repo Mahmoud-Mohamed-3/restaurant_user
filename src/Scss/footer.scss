@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+.footer_section {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer_item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+font-family: $main_font_family;
+}
+
+.footer-description {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.5;
+  font-family: $second_font_family;
+}
+
+.footer_social {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+
+}
+
+.footer_social a {
+  color: #fff;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.footer_social a:hover {
+  color: #ff5733; /* You can use any hover color you prefer */
+}
+
+.footer_bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.footer_bottom a {
+  color: #ff5733;
+  text-decoration: none;
+}
+
+.footer_bottom a:hover {
+  text-decoration: underline;
+}
+h4 {
+  font-family: $main_font_family;
+  font-size: 2rem;
+}

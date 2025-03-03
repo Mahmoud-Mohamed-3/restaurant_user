@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.OurCustomersOpinion {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #f4f4f4;
+  overflow: hidden; /* Prevents overflow outside of the container */
+}
+
+.SectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for the opinions */
+.OpinionsContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide the overflowing content */
+}
+
+.OpinionsMarquee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: scrollLeft 14s linear infinite;
+          animation: scrollLeft 14s linear infinite;
+  gap: 30px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+/* Each individual opinion card */
+.OpinionCard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  max-width: 300px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+/* Hover Effect */
+.OpinionCard:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+          box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+}
+
+/* Opinion Info */
+.OpinionInfo h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+  color: #ffbe33;
+}
+
+.OpinionText {
+  font-size: 1rem;
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+}
+
+@-webkit-keyframes scrollLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}

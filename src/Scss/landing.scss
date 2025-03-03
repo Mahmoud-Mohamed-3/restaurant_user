@@ -1,34 +1,4 @@
 @use "variables" as *;
-//.LandingPage {
-//  height: calc(100vh - 97px);
-//  overflow: hidden;
-//
-//  .Carousel {
-//    width: 100%;
-//    height: 100%;
-//    display: flex;
-//    margin: 0 auto;
-//
-//    .CarouselImage {
-//      width: 100%;
-//      height: 100%;
-//      margin: 0 auto;
-//      position: relative;
-//
-//      img {
-//        width: 100vw;
-//        height: 100vh;
-//        object-fit: cover;
-//        position: absolute;
-//        top: 0;
-//        left: 0;
-//      }
-//    }
-//  }
-//}\\\\
-
-
-
 
 .LandingPage {
   height: calc(100vh - 97px);
@@ -111,9 +81,6 @@
 
     .Caption {
       position: absolute;
-      //bottom: 50px;
-      //left: 50%;
-      //transform: translateX(-50%);
       text-align: center;
       color: white;
       z-index: 20;
@@ -134,7 +101,8 @@
       }
 
       button {
-        background: #ff5722;
+        //background: #ff5722;
+        background: $second_color;
         color: white;
         padding: 10px 20px;
         border: none;
@@ -143,63 +111,51 @@
         border-radius: 5px;
 
         &:hover {
-          background: #e64a19;
+          background: $main_color;
         }
       }
     }
+
+    .DotsNavigation {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .Dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: $main_color;
+      }
+    }
+
+    .caption-0 {
+      top: 50%;
+      right: 2%;
+      transform: translate(-50%, -50%);
+    }
+
+    .caption-1 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .caption-2 {
+      top: 44%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
   }
-}
-
-
-
-.Carousel {
-  position: relative;
-}
-
-.ImageContainer {
-  position: relative;
-}
-
-.DotsNavigation {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.Dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.Dot.active {
-  background-color:$main_color;
-}
-
-.Caption {
-  position: absolute;
-  color: white;
-}
-.caption-0{
-top: 50%;
-  right: 2%;
-transform: translate(-50%, -50%);
-}
-.caption-1{
-  top : 50%;
-  left: 50%;
-    transform: translate(-50%, -50%);
-}
-.caption-2{
-  top: 44%;
-  left: 20%;
-  transform: translate(-50%, -50%);
 }

@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.CategoriesSection {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.SectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Dancing Script", cursive;
+}
+
+/* Swiper Container */
+.CategoriesSlider {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* Individual Category Card */
+.CategoryCard {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  cursor: none;
+  text-align: center;
+}
+
+.CategoryCard:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Category Image */
+.CategoryImage {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.CategoryImage:hover {
+  opacity: 0.9;
+}
+
+/* Category Content */
+.CategoryContent {
+  padding: 20px;
+}
+
+.CategoryContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff6600;
+  font-family: "Dancing Script", cursive;
+}
+
+.CategoryContent p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* View Category Button */
+.ViewCategoryButton {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: none;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  font-family: "Open Sans", sans-serif;
+}
+
+.ViewCategoryButton:hover {
+  background-color: #cc5200;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet-active {
+  background-color: #ff6600;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+/* Custom Cursor */
+.CustomCursor {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: #ff6600; /* Orange circle */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  pointer-events: none; /* Prevents interference with clicks */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 0.1s ease-out;
+  transition: -webkit-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
+  opacity: 0;
+  z-index: 1000;
+}
+
+/* Show cursor on hover */
+.CustomCursor.visible {
+  opacity: 1;
+}
+
+/* Hide default cursor on cards */
+.CategoryCard {
+  cursor: none;
+}

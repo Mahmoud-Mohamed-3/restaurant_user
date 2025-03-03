@@ -1,4 +1,7 @@
 @use "variables" as *;
+body {
+  scroll-behavior: smooth;
+}
 .Container {
   width: 100%;
   margin: 0 auto;
@@ -34,7 +37,7 @@
     .NavLinks {
       //width: 26%;
       //margin: 0 auto;
-      width: 25%;
+      width: 35%;
       margin: 0 auto;
       margin-left: 215px;
       display: flex;
