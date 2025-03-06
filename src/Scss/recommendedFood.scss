@@ -1,26 +1,21 @@
 @use "variables" as *;
-.CategoriesSection {
+.RecommendedFoodSection {
   text-align: center;
   padding: 60px 20px;
   background-color: #f9f9f9;
 }
 
-.SectionTitle {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-    font-family: $main_font_family;
-}
+
 
 /* Swiper Container */
-.CategoriesSlider {
+.foodSlider {
   max-width: 1100px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 
 /* Individual Category Card */
-.CategoryCard {
+.foodCard {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -30,13 +25,13 @@
   text-align: center;
 }
 
-.CategoryCard:hover {
+.foodCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Category Image */
-.CategoryImage {
+.foodImage {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -49,28 +44,28 @@
 }
 
 /* Category Content */
-.CategoryContent {
+.foodContent {
   padding: 20px;
 }
 
-.CategoryContent h3 {
+.foodContent h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: $second_color;
   font-family: $main_font_family;
 }
 
-.CategoryContent p {
+.foodContent p {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
   margin-bottom: 10px;
-    font-family: $second_font_family;
+  font-family: $second_font_family;
   height: 70px;
 }
 
 /* View Category Button */
-.ViewCategoryButton {
+.ViewfoodButton {
   background-color:$second_color;
   color: white;
   padding: 10px 15px;

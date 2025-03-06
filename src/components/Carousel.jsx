@@ -10,7 +10,7 @@ import React, {
 } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Carousel() {
+export default function Carousel({ onMenuClick }) {
   const carouselImages = [hero1, hero2, hero3];
   const [index, setIndex] = useState(0);
   const length = carouselImages.length;
@@ -125,6 +125,7 @@ export default function Carousel() {
           whileHover={{ scale: 1.1, backgroundColor: "#f39c12" }} // Hover effect with color change
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.3 }}
+          onClick={onMenuClick}
         >
           Order Online
         </motion.button>

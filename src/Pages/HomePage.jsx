@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <>
       <NavBar onMenuClick={handleScrollToCategories} />
-      <Landing />
+      <Landing onMenuClick={handleScrollToCategories} />
       <AboutUS />
 
       {/* Reference Categories to scroll to it */}

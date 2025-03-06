@@ -22,6 +22,7 @@ export default function CategoryPage() {
     };
     fetchCategory();
   }, [id]);
+
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [showCursor, setShowCursor] = useState(false);
 
@@ -34,6 +35,7 @@ export default function CategoryPage() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
   useEffect(() => {
     document.title = category?.title || "Category";
   }, [category]);
@@ -52,7 +54,11 @@ export default function CategoryPage() {
   return (
     <>
       <div className="CategoryPage">
-        {/* Navigation Bar */}
+        {/* Breadcrumb Navigation */}
+        <div className="Breadcrumb">
+          <Link to="/">Home</Link> / {category.title}
+        </div>
+
         <div className="CategoryName">{category.title}</div>
         <div className={"CategoryDetails"}>
           <div className={"CategoryImage"}>
@@ -80,33 +86,34 @@ export default function CategoryPage() {
           </div>
           <div className="FoodGrid">
             {foods.map((food) => (
-              <div
-                key={food.id}
-                className="FoodCard"
-                onMouseEnter={() => setShowCursor(true)}
-                onMouseLeave={() => setShowCursor(false)}
-              >
-                <div className={"ImageContainer"}>
-                  <img
-                    src={food.image_url}
-                    alt={food.name}
-                    srcSet={`${food.image_url}?w=400 400w, ${food.image_url}?w=800 800w`}
-                    sizes="(max-width: 768px) 400px, 800px"
-                  />
-                </div>
+              <Link to={`/food/${food.id}`} key={food.id}>
+                <div
+                  className="FoodCard"
+                  onMouseEnter={() => setShowCursor(true)}
+                  onMouseLeave={() => setShowCursor(false)}
+                >
+                  <div className={"ImageContainer"}>
+                    <img
+                      src={food.image_url}
+                      alt={food.name}
+                      srcSet={`${food.image_url}?w=400 400w, ${food.image_url}?w=800 800w`}
+                      sizes="(max-width: 768px) 400px, 800px"
+                    />
+                  </div>
 
-                <div className="card-body">
-                  <motion.h3
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {food.name}
-                  </motion.h3>
-                  <p>{firstTwentyWords(food.description)}</p>
-                  <div className={"Price"}>{food.price} LE</div>
-                  <button className={"OrderButton"}>Order Now</button>
+                  <div className="card-body">
+                    <motion.h3
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      {food.name}
+                    </motion.h3>
+                    <p>{firstTwentyWords(food.description)}</p>
+                    <div className={"Price"}>{food.price} LE</div>
+                    <button className={"OrderButton"}>Order Now</button>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

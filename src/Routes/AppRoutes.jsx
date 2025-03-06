@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import LoginPage from "../Pages/Login.jsx";
 import HomePage from "../Pages/HomePage.jsx";
 import CategoryPage from "../Pages/ShowCategory.jsx";
+import FoodPage from "../Pages/FoodPage.jsx";
 
 export default function AppRoutes() {
   return (
@@ -11,6 +12,7 @@ export default function AppRoutes() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={<HomePage />} />
       <Route path="/category/:id" element={<CategoryPage />} />
+      <Route path={"/food/:id"} element={<FoodPage />} />
     </Routes>
   );
 }

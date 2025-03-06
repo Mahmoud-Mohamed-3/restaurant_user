@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-.CategoryPage {
+.CategoryPage  {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -193,12 +193,14 @@
             color: #666;
             font-size: 16px;
             margin-bottom: 7px;
+            min-height: 110px;
             font-family: "Open Sans", sans-serif;
           }
           .Price {
             font-size: 1.5rem;
             font-family: $main_font_family;
             color: $second_color;
+            margin-bottom: 5px;
           }
           .OrderButton {
             background-color: $second_color;

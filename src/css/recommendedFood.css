@@ -1,28 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-.CategoriesSection {
+.RecommendedFoodSection {
   text-align: center;
   padding: 60px 20px;
   background-color: #f9f9f9;
 }
 
-.SectionTitle {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-  font-family: "Dancing Script", cursive;
-}
-
 /* Swiper Container */
-.CategoriesSlider {
+.foodSlider {
   max-width: 1100px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 
 /* Individual Category Card */
-.CategoryCard {
+.foodCard {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -36,7 +29,7 @@
   text-align: center;
 }
 
-.CategoryCard:hover {
+.foodCard:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -44,7 +37,7 @@
 }
 
 /* Category Image */
-.CategoryImage {
+.foodImage {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
@@ -54,23 +47,23 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.CategoryImage:hover {
+.foodImage:hover {
   opacity: 0.9;
 }
 
 /* Category Content */
-.CategoryContent {
+.foodContent {
   padding: 20px;
 }
 
-.CategoryContent h3 {
+.foodContent h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #ff6600;
   font-family: "Dancing Script", cursive;
 }
 
-.CategoryContent p {
+.foodContent p {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
@@ -80,7 +73,7 @@
 }
 
 /* View Category Button */
-.ViewCategoryButton {
+.ViewfoodButton {
   background-color: #ff6600;
   color: white;
   padding: 10px 15px;

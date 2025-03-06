@@ -1,0 +1,224 @@
+@use "variables" as *;
+
+body {
+  scroll-behavior: smooth;
+}
+.Breadcrumb {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.Breadcrumb a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.Breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.Breadcrumb span {
+  color: #666;
+}
+
+.FoodPage {
+  background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  .DisplayFood {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 50px;
+    .FoodName {
+      padding-bottom: 20px;
+      font-size: 3rem;
+      font-family: $main_font_family;
+      color: $second_color;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      border-bottom: 2px solid rgba(204, 204, 204, 0.5);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        top: 82%;
+        left: 57%;
+        transform: translate(-50%, -50%);
+        background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23ccc%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%20367.339%20367.34%22%20xml%3Aspace%3D%22preserve%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%20-1%2C%200%2C%200)%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cg%3E%3Cpath%20d%3D%22M337.591%2C0.932c-13.464%2C6.12-26.315%2C12.852-39.168%2C20.196c-11.628%2C6.12-25.704%2C12.24-35.496%2C21.42%20c-5.508%2C4.896%2C0%2C15.3%2C7.344%2C12.852c0%2C0%2C0.612%2C0%2C0.612-0.612c1.836%2C1.224%2C3.061%2C2.448%2C4.896%2C4.284c0%2C0.612%2C0.611%2C1.836%2C0.611%2C2.448%20c0.612%2C1.224%2C1.836%2C2.448%2C3.061%2C3.672c-17.748%2C33.048-34.272%2C66.096-55.08%2C96.696c-6.12%2C9.18-12.853%2C17.748-20.808%2C25.704%20c-19.584-31.212-51.409-67.32-89.965-60.588c-50.796%2C9.18-23.256%2C63.647%2C3.06%2C82.008c31.212%2C22.644%2C58.14%2C21.42%2C85.068%2C0%20c12.24%2C20.808%2C20.809%2C44.063%2C19.584%2C66.708c-1.836%2C54.468-50.796%2C63.647-91.8%2C49.571c6.12-15.912%2C7.956-34.271%2C4.284-50.184%20c-6.12-28.764-50.184-54.468-75.888-34.272c-25.092%2C20.196%2C22.032%2C71.604%2C37.332%2C82.009c4.284%2C3.06%2C9.18%2C6.119%2C14.076%2C8.567%20c-0.612%2C0.612-0.612%2C1.225-1.224%2C1.836c-28.152%2C44.064-65.484%2C6.12-82.62-25.092c-2.448-4.896-9.18-0.612-7.344%2C4.284%20c14.076%2C32.436%2C42.84%2C70.38%2C81.396%2C48.348c9.18-5.508%2C17.136-13.464%2C22.644-23.256c33.66%2C13.464%2C72.829%2C13.464%2C97.308-17.136%20c29.376-36.72%2C11.017-84.456-8.567-119.952c0.611-0.612%2C0.611-0.612%2C1.224-1.224c34.884-33.66%2C56.304-81.396%2C78.336-124.236%20c4.284%2C3.06%2C9.181%2C6.12%2C13.464%2C9.18c3.061%2C1.836%2C7.345%2C1.224%2C9.792-1.224c17.748-20.808%2C31.212-45.9%2C35.496-73.44%20C351.055%2C2.768%2C344.324-2.128%2C337.591%2C0.932z%20M178.471%2C207.787c-23.256%2C13.464-46.512-3.06-63.648-18.972%20c-22.644-20.808-16.524-54.468%2C18.36-47.735c17.748%2C3.672%2C31.824%2C19.584%2C43.452%2C32.436c6.12%2C6.732%2C12.241%2C14.687%2C17.749%2C23.255%20C189.488%2C201.056%2C183.979%2C204.728%2C178.471%2C207.787z%20M116.047%2C319.171C116.047%2C319.171%2C115.435%2C319.171%2C116.047%2C319.171%20c-16.524-8.567-28.764-20.808-38.556-36.107c-4.284-6.732-7.956-14.076-9.792-22.032c-6.12-20.808%2C26.928-10.404%2C35.496-6.12%20C126.451%2C267.764%2C124.615%2C297.14%2C116.047%2C319.171z%20M306.379%2C67.028c-0.612%2C0-0.612-0.612-1.224-0.612%20c0-1.836-1.225-3.672-3.672-4.896c-4.284-1.836-8.568-4.284-12.853-6.732c-1.836-1.224-5.508-4.896-5.508-3.672%20c0-0.612-0.612-1.224-1.224-1.224c6.731-3.672%2C13.464-8.568%2C20.195-12.24c8.568-4.896%2C17.748-9.792%2C26.929-14.688%20C324.74%2C38.264%2C316.784%2C53.564%2C306.379%2C67.028z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        top: 84%;
+        left: 44%;
+        transform: translate(-50%, -50%);
+        background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23ccc%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%20367.339%20367.34%22%20xml%3Aspace%3D%22preserve%22%20transform%3D%22matrix(-1%2C%200%2C%200%2C%20-1%2C%200%2C%200)%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke%3D%22%23CCCCCC%22%20stroke-width%3D%220.7346779999999999%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cg%3E%3Cpath%20d%3D%22M337.591%2C0.932c-13.464%2C6.12-26.315%2C12.852-39.168%2C20.196c-11.628%2C6.12-25.704%2C12.24-35.496%2C21.42%20c-5.508%2C4.896%2C0%2C15.3%2C7.344%2C12.852c0%2C0%2C0.612%2C0%2C0.612-0.612c1.836%2C1.224%2C3.061%2C2.448%2C4.896%2C4.284c0%2C0.612%2C0.611%2C1.836%2C0.611%2C2.448%20c0.612%2C1.224%2C1.836%2C2.448%2C3.061%2C3.672c-17.748%2C33.048-34.272%2C66.096-55.08%2C96.696c-6.12%2C9.18-12.853%2C17.748-20.808%2C25.704%20c-19.584-31.212-51.409-67.32-89.965-60.588c-50.796%2C9.18-23.256%2C63.647%2C3.06%2C82.008c31.212%2C22.644%2C58.14%2C21.42%2C85.068%2C0%20c12.24%2C20.808%2C20.809%2C44.063%2C19.584%2C66.708c-1.836%2C54.468-50.796%2C63.647-91.8%2C49.571c6.12-15.912%2C7.956-34.271%2C4.284-50.184%20c-6.12-28.764-50.184-54.468-75.888-34.272c-25.092%2C20.196%2C22.032%2C71.604%2C37.332%2C82.009c4.284%2C3.06%2C9.18%2C6.119%2C14.076%2C8.567%20c-0.612%2C0.612-0.612%2C1.225-1.224%2C1.836c-28.152%2C44.064-65.484%2C6.12-82.62-25.092c-2.448-4.896-9.18-0.612-7.344%2C4.284%20c14.076%2C32.436%2C42.84%2C70.38%2C81.396%2C48.348c9.18-5.508%2C17.136-13.464%2C22.644-23.256c33.66%2C13.464%2C72.829%2C13.464%2C97.308-17.136%20c29.376-36.72%2C11.017-84.456-8.567-119.952c0.611-0.612%2C0.611-0.612%2C1.224-1.224c34.884-33.66%2C56.304-81.396%2C78.336-124.236%20c4.284%2C3.06%2C9.181%2C6.12%2C13.464%2C9.18c3.061%2C1.836%2C7.345%2C1.224%2C9.792-1.224c17.748-20.808%2C31.212-45.9%2C35.496-73.44%20C351.055%2C2.768%2C344.324-2.128%2C337.591%2C0.932z%20M178.471%2C207.787c-23.256%2C13.464-46.512-3.06-63.648-18.972%20c-22.644-20.808-16.524-54.468%2C18.36-47.735c17.748%2C3.672%2C31.824%2C19.584%2C43.452%2C32.436c6.12%2C6.732%2C12.241%2C14.687%2C17.749%2C23.255%20C189.488%2C201.056%2C183.979%2C204.728%2C178.471%2C207.787z%20M116.047%2C319.171C116.047%2C319.171%2C115.435%2C319.171%2C116.047%2C319.171%20c-16.524-8.567-28.764-20.808-38.556-36.107c-4.284-6.732-7.956-14.076-9.792-22.032c-6.12-20.808%2C26.928-10.404%2C35.496-6.12%20C126.451%2C267.764%2C124.615%2C297.14%2C116.047%2C319.171z%20M306.379%2C67.028c-0.612%2C0-0.612-0.612-1.224-0.612%20c0-1.836-1.225-3.672-3.672-4.896c-4.284-1.836-8.568-4.284-12.853-6.732c-1.836-1.224-5.508-4.896-5.508-3.672%20c0-0.612-0.612-1.224-1.224-1.224c6.731-3.672%2C13.464-8.568%2C20.195-12.24c8.568-4.896%2C17.748-9.792%2C26.929-14.688%20C324.74%2C38.264%2C316.784%2C53.564%2C306.379%2C67.028z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        //background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23ccc%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%20367.339%20367.34%22%20xml%3Aspace%3D%22preserve%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%20-1%2C%200%2C%200)%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cg%3E%3Cpath%20d%3D%22M337.591%2C0.932c-13.464%2C6.12-26.315%2C12.852-39.168%2C20.196c-11.628%2C6.12-25.704%2C12.24-35.496%2C21.42%20c-5.508%2C4.896%2C0%2C
+      }
+    }
+
+    .FoodDetails {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      //padding-bottom: 60px;
+      margin-bottom: 20px;
+
+      gap: 40px;
+      .FoodImage {
+        //border-radius: 50%;
+        width: 280px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //border: 1px solid #ccc;
+        border-radius: 16px;
+        position: relative;
+
+        img {
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          border-radius: 16px;
+          object-fit: cover;
+          //max-width: 100%;
+          //max-height: 100%;
+        }
+      }
+      .Details {
+        .Food {
+          font-size: 2.4rem;
+          font-family: $main_font_family;
+          color: $second_color;
+          margin-bottom: 8px;
+          text-align: center;
+        }
+        .FoodDescription {
+          width: 500px;
+          font-family: $roboto_font_family;
+          font-size: 16px;
+          color: #777;
+          margin-bottom: 20px;
+        }
+
+        .Ingredients {
+          padding: 20px;
+          background: #f9f9f9;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 16px;
+          margin-top: 10px;
+        }
+
+        .Ingredients h3 {
+          text-align: center;
+          font-size: 22px;
+          color: #333;
+          margin-bottom: 12px;
+          font-family: $roboto_font_family;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+
+        .Ingredients li {
+          background: white;
+          padding: 12px;
+          border-radius: 6px;
+          text-align: center;
+          font-size: 16px;
+          font-weight: bold;
+          transition: transform 0.2s ease-in-out;
+          color: $main_color;
+        }
+
+        .Ingredients li:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+    .Quantity {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      .QuantitySelector {
+        //border: 1px solid #ccc;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+        button {
+          border: none;
+          background: none;
+          font-size: 2rem;
+          font-family: $main_font_family;
+          color: $second_color;
+          padding: 0 4px;
+          cursor: pointer;
+        }
+        span {
+          font-size: 21px;
+          padding: 2px;
+          border: 1px solid $second_color;
+          border-radius: 4px;
+          font-family: $main_font_family;
+        }
+      }
+      .TotalPrice {
+        font-size: 1.5rem;
+        font-family: $main_font_family;
+        color: $second_color;
+      }
+    }
+    .AddToCart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      button {
+        padding: 10px 20px;
+        font-size: 1.8rem;
+        font-family: $main_font_family;
+        color: white;
+        background-color: $second_color;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          background-color: darken($second_color, 10%);
+        }
+      }
+    }
+  }
+  .Splitter {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-family: $main_font_family;
+    color: $second_color;
+    text-align: center;
+    font-size: 3rem;
+  }
+}

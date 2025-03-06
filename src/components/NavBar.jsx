@@ -50,7 +50,11 @@ export default function NavBar({ onMenuClick }) {
           ))}
         </ul>
 
-        <button className="OrderButton" aria-label="Order Online">
+        <button
+          className="OrderButton"
+          aria-label="Order Online"
+          onClick={onMenuClick}
+        >
           Order Online
         </button>
       </nav>
