@@ -1,0 +1,231 @@
+@use "variables" as *;
+
+body {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.CartPage {
+  padding: 20px 0;
+
+  .Title {
+    font-family: $main_font_family;
+    color: $second_color;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .ItemsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+    .Item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .ItemImage {
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+
+      .ItemDetails {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+
+        .Name {
+          font-family: $main_font_family;
+          color: $second_color;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          max-width: 150px;
+        }
+
+        .Price {
+          font-family: $main_font_family;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #242424;
+        }
+
+        .QuantityControls {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          button {
+            background-color: $second_color;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-family: $main_font_family;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: darken($second_color, 10%);
+            }
+
+            &:disabled {
+              background-color: rgba(0, 0, 0, 0.2);
+              cursor: not-allowed;
+            }
+          }
+
+          .Quantity {
+            font-family: $main_font_family;
+            font-size: 1.2rem;
+            color: $second_color;
+            min-width: 30px;
+            text-align: center;
+          }
+        }
+
+        .DeleteIcon {
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: red;
+          transition: all 0.3s;
+
+          &:hover {
+            color: darken(red, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .OrderSummary {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .SummaryTitle {
+      font-family: $main_font_family;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: $second_color;
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .OrderItems {
+      padding: 15px 0;
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .OrderItem {
+        display: flex;
+        justify-content: space-between;
+        font-family: $main_font_family;
+        color: #333;
+        font-weight: 500;
+      }
+    }
+
+    .TotalPrice {
+      font-family: $main_font_family;
+      font-size: 1.5rem;
+      color: $second_color;
+      font-weight: bold;
+      text-align: right;
+      margin-top: 15px;
+      padding-top: 10px;
+      border-top: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .CheckoutButton {
+      width: 100%;
+      padding: 12px;
+      background-color: $second_color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-family: $main_font_family;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 15px;
+
+      &:hover {
+        background-color: darken($second_color, 10%);
+      }
+    }
+  }
+}
+
+.EmptyCartContainer {
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+
+  .EmptyCart {
+    font-family: $main_font_family;
+    color: $second_color;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  .Button {
+    padding: 12px 25px;
+    background-color: $second_color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: $main_font_family;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: darken($second_color, 10%);
+    }
+  }
+}

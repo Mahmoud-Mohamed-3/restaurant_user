@@ -47,6 +47,7 @@ body {
     .NavButtons {
       font-size: 20px;
       margin: 0 auto;
+      position: relative;
     }
     .OrderButton {
       background-color: $main_color;
@@ -79,4 +80,13 @@ a {
   &:hover {
     color: $main_color;
   }
+}
+
+.anticon-shopping-cart{
+    font-size: 20px;
+    color: #fff;
+    margin-right: 10px;
+    &:hover {
+        color: $main_color;
+    }
 }

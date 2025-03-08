@@ -4,6 +4,8 @@ import LoginPage from "../Pages/Login.jsx";
 import HomePage from "../Pages/HomePage.jsx";
 import CategoryPage from "../Pages/ShowCategory.jsx";
 import FoodPage from "../Pages/FoodPage.jsx";
+import CartPage from "../Pages/Cart.jsx";
+import BookTable from "../Pages/BookTable.jsx";
 
 export default function AppRoutes() {
   return (
@@ -13,6 +15,8 @@ export default function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/category/:id" element={<CategoryPage />} />
       <Route path={"/food/:id"} element={<FoodPage />} />
+      <Route path={"/cart"} element={<CartPage />} />
+      <Route path={"/book_table"} element={<BookTable />} />
     </Routes>
   );
 }

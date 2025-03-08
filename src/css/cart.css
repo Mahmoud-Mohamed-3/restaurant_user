@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.CartPage {
+  padding: 20px 0;
+}
+.CartPage .Title {
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.CartPage .ItemsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.CartPage .ItemsContainer .Item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.CartPage .ItemsContainer .Item:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.CartPage .ItemsContainer .Item .ItemImage {
+  width: 120px;
+  height: 120px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.CartPage .ItemsContainer .Item .ItemImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.CartPage .ItemsContainer .Item .ItemDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .Name {
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  max-width: 150px;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .Price {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #242424;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .QuantityControls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .QuantityControls button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .QuantityControls button:hover {
+  background-color: #cc5200;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .QuantityControls button:disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .QuantityControls .Quantity {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  color: #ff6600;
+  min-width: 30px;
+  text-align: center;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .DeleteIcon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: red;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.CartPage .ItemsContainer .Item .ItemDetails .DeleteIcon:hover {
+  color: #cc0000;
+}
+.CartPage .OrderSummary {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.CartPage .OrderSummary .SummaryTitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6600;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.CartPage .OrderSummary .OrderItems {
+  padding: 15px 0;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.CartPage .OrderSummary .OrderItems .OrderItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Dancing Script", cursive;
+  color: #333;
+  font-weight: 500;
+}
+.CartPage .OrderSummary .TotalPrice {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  color: #ff6600;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+.CartPage .OrderSummary .CheckoutButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 15px;
+}
+.CartPage .OrderSummary .CheckoutButton:hover {
+  background-color: #cc5200;
+}
+
+.EmptyCartContainer {
+  height: calc(100vh - 200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+  text-align: center;
+}
+.EmptyCartContainer .EmptyCart {
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.EmptyCartContainer .Button {
+  padding: 12px 25px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.EmptyCartContainer .Button:hover {
+  background-color: #cc5200;
+}

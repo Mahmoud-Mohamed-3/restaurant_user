@@ -5,19 +5,44 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import "../css/NavBar.css";
+import { Badge } from "antd";
+import { useCookies } from "react-cookie";
 
 export default function NavBar({ onMenuClick }) {
-  // Memoize the links to avoid unnecessary re-renders (optional in this case but useful for larger components)
+  // Get cart count safely
+  const cart = JSON.parse(window.sessionStorage.getItem("Cart") || "[]");
+  const cartCount = Array.isArray(cart) ? cart.length : 0;
+  const [cookies, setCookies] = useCookies();
   const navigationLinks = [
     { to: "/", label: "Home" },
     { to: "#menu", label: "Menu", onClick: onMenuClick }, // Trigger scroll on click
-    { to: "#", label: "Book Table" },
+    { to: "/book_table", label: "Book Table" },
     { to: "#", label: "Contact Us" },
   ];
 
   const iconLinks = [
-    { to: "#", icon: <UserOutlined />, label: "User" },
-    { to: "#", icon: <ShoppingCartOutlined />, label: "Cart" },
+    {
+      to: "#",
+      icon: (
+        <UserOutlined
+          onClick={() => {
+            if (!cookies.jwt) {
+              window.location.href = "/login";
+            }
+          }}
+        />
+      ),
+      label: "User",
+    },
+    {
+      to: "/cart",
+      icon: (
+        <Badge count={cartCount} showZero>
+          <ShoppingCartOutlined />
+        </Badge>
+      ),
+      label: "Cart",
+    },
     { to: "#", icon: <SearchOutlined />, label: "Search" },
   ];
 

@@ -70,6 +70,7 @@ body {
 .Container nav .NavButtons {
   font-size: 20px;
   margin: 0 auto;
+  position: relative;
 }
 .Container nav .OrderButton {
   background-color: #ffbe33;
@@ -102,5 +103,14 @@ a {
   margin: 0 1rem;
 }
 a:hover {
+  color: #ffbe33;
+}
+
+.anticon-shopping-cart {
+  font-size: 20px;
+  color: #fff;
+  margin-right: 10px;
+}
+.anticon-shopping-cart:hover {
   color: #ffbe33;
 }

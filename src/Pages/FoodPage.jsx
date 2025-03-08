@@ -9,7 +9,6 @@ export default function FoodPage() {
   const { id } = useParams();
   const [food, setFood] = useState(null);
   const [numberOfItems, setNumberOfItems] = useState(1);
-
   // Initialize the cart only if it doesn't already exist
   useEffect(() => {
     if (!window.sessionStorage.getItem("Cart")) {
@@ -35,14 +34,22 @@ export default function FoodPage() {
       message.info(
         "The item is already in your order. We updated the quantity.",
       );
+      setNumberOfItems(1);
     } else {
       // If the food item is not in the cart, add it
-      cart.push({ id: food.id, quantity: numberOfItems });
+      cart.push({
+        id: food.id,
+        quantity: numberOfItems,
+        image_url: food.image_url,
+        name: food.name,
+        price: food.price,
+      });
       message.success("Added To Your Order");
     }
 
     // Save the updated cart to sessionStorage
     window.sessionStorage.setItem("Cart", JSON.stringify(cart));
+    setNumberOfItems(1);
   };
 
   useEffect(() => {

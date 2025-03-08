@@ -1,0 +1,159 @@
+@use "variables" as *;
+.BookTablePage {
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  .Title{
+    font-family: $main_font_family;
+    color: $second_color;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  .PageContent{
+    padding-top: 40px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    .FormContainer{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .Desc {
+        font-size: 1.2rem;
+        color: #333;
+        font-family: $roboto_font_family;
+        text-align: center;
+      }
+      .TablesContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+        margin: 0 auto;
+        max-width: 600px;
+        .TableItem {
+          padding: 15px;
+          border: 2px solid #ddd;
+          border-radius: 5px;
+          cursor: pointer;
+          text-align: center;
+          transition: 0.3s;
+          p {
+            font-family: $main_font_family;
+            font-size: 1.2rem;
+            color: $second_color;
+          }
+          span{
+            font-family: $roboto_font_family;
+          }
+          &.Selected{
+            background-color: #ff6600;
+            color: white;
+            border-color: #ff6600;
+            p{
+                color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .Image {
+      width: 600px;
+        img {
+            width: 600px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    }
+  }
+.Wishing{
+position: absolute;
+bottom: 50px;
+left: 50%;
+transform: translateX(-50%);
+//width: 100%;
+  h2 {
+    font-family: $main_font_family;
+    font-size: 2.5rem;
+    color: $second_color;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  p {
+    font-family: $roboto_font_family;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+  }
+}
+}
+
+
+
+
+
+
+
+.BookingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.BookingForm .ant-picker {
+  width: 250px;
+}
+//
+//.Image img {
+//  width: 100%;
+//  max-width: 400px;
+//  margin-top: 20px;
+//  border-radius: 5px;
+//}
+
+:where(.css-dev-only-do-not-override-1v613y0).ant-picker-outlined:focus-within {
+    border-color: #ff6600;
+    box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2);
+}
+:where(.css-dev-only-do-not-override-1v613y0).ant-picker-outlined:hover {
+  border-color: #ff6600;
+  box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2);
+}
+.ant-btn-primary{
+  font-family: $main_font_family;
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: white;
+    font-weight: bold;
+  font-size: 2rem;
+  padding: 25px 40px;
+    border-radius: 5px;
+    &:hover{
+        background-color: #ff6600;
+        border-color: #ff6600;
+        color: white;
+    }
+}
+:where(.css-dev-only-do-not-override-1v613y0).ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover{
+    background-color: darken(#ff6600, 10%);
+    border-color: #ff6600;
+    color: white;
+}
+
+:where(.css-dev-only-do-not-override-1v613y0).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected:not(.ant-picker-cell-disabled) .ant-picker-cell-inner{
+    background-color: #ff6600;
+    color: white;
+}

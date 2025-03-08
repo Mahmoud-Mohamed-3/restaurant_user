@@ -45,7 +45,14 @@ export default function AboutUS() {
       {/* Call to Action Section */}
       <div className="CTASection">
         <h2>Ready to Experience the Best?</h2>
-        <button className="cta-button">Book a Table</button>
+        <button
+          className="cta-button"
+          onClick={() => {
+            window.location.href = "/book_table";
+          }}
+        >
+          Book a Table
+        </button>
       </div>
     </div>
   );

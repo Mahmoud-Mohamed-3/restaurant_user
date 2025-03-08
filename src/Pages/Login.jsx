@@ -8,7 +8,11 @@ import { LoginApi } from "../API Calls/Regestrations/LoginApi.jsx";
 export default function LoginPage() {
   const [form] = Form.useForm();
   const [cookies, setCookie] = useCookies(["jwt"]);
-
+  useEffect(() => {
+    if (cookies.jwt) {
+      window.location.href = "/";
+    }
+  }, []);
   // Load saved form data from sessionStorage on page load
   useEffect(() => {
     const savedValues = sessionStorage.getItem("loginFormData");
@@ -30,6 +34,9 @@ export default function LoginPage() {
         message.success("Login successful");
         sessionStorage.removeItem("loginFormData");
         form.resetFields();
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1000);
       } else if (response.status === 401) {
         message.error("Invalid email or password");
         sessionStorage.removeItem("loginFormData");

@@ -10,7 +10,11 @@ import { useCookies } from "react-cookie";
 export default function RegisterPage() {
   const [form] = Form.useForm();
   const [cookies] = useCookies([]);
-
+  useEffect(() => {
+    if (cookies.jwt) {
+      window.location.href = "/";
+    }
+  }, []);
   useEffect(() => {
     const savedValues = localStorage.getItem("registerFormData");
     if (savedValues) {
