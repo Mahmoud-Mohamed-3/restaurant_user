@@ -49,6 +49,114 @@ body {
       margin: 0 auto;
       position: relative;
     }
+    .SearchContainer {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 50500000;
+      top: 79px;
+      left: 70%;
+      padding: 16px;
+      background-color: $main_color;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      width: 300px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -19px;
+        left: 10%;
+        transform: translateX(-50%);
+        border: 10px solid transparent;
+        border-bottom-color: #ffbe33;
+        z-index: 88888000000000;
+      }
+      .Search {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 78%;
+          padding: 10px;
+          border: none;
+          border-radius: 8px;
+          font-family: $second_font_family;
+          font-weight: 700;
+          letter-spacing: 1px;
+          color: #fff;
+          background-color: #000;
+          &::placeholder {
+            color: #fff;
+          }
+        }
+        button {
+          background-color: $main_color;
+          padding: 10px 20px;
+          border: none;
+          color: #fff;
+          font-family: $second_font_family;
+          font-weight: 700;
+          letter-spacing: 1px;
+          border-radius: 12px;
+          cursor: pointer;
+          &:hover {
+            background-color: darken($main_color, 10%);
+          }
+        }
+      }
+      .Results {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        //justify-content: space-between;
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          li {
+            padding: 10px;
+            font-family: $second_font_family;
+            font-weight: 700;
+            letter-spacing: 1px;
+            width: 100%;
+            color: #fff;
+           &:not(:last-child) {
+              border-bottom: 1px solid #fff;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+              &:hover {
+                color: $second_color;
+              }
+            }
+            div {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              max-width: 100%;
+              gap: 16px;
+              flex-direction: row;
+              img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+              }
+              p{
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                color: #fff;
+                width: 70%;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .OrderButton {
       background-color: $main_color;
       padding: 10px 20px;
@@ -82,11 +190,11 @@ a {
   }
 }
 
-.anticon-shopping-cart{
-    font-size: 20px;
-    color: #fff;
-    margin-right: 10px;
-    &:hover {
-        color: $main_color;
-    }
+.anticon-shopping-cart {
+  font-size: 20px;
+  color: #fff;
+  margin-right: 10px;
+  &:hover {
+    color: $main_color;
+  }
 }
