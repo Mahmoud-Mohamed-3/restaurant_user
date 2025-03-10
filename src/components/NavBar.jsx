@@ -19,12 +19,12 @@ export default function NavBar({ onMenuClick }) {
     { to: "/", label: "Home" },
     { to: "#menu", label: "Menu", onClick: onMenuClick }, // Trigger scroll on click
     { to: "/book_table", label: "Book Table" },
-    { to: "#", label: "Contact Us" },
+    { to: "/contact", label: "Contact Us" },
   ];
 
   const iconLinks = [
     {
-      to: "#",
+      to: `${cookies.jwt ? "/profile" : "/login"}`,
       icon: (
         <UserOutlined
           onClick={() => {

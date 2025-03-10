@@ -18,28 +18,30 @@
   align-items: center;
   position: relative;
 }
-.ResName {
-  position: absolute;
-  font-family: $main_font_family;
-  font-size: 300px;
-  color: $main_color;
-  text-align: center;
-  font-weight: bolder;
-  margin-bottom: 1rem;
-  transform: translate(-50%, -50%) rotateZ(30deg);
-  top: 50%;
-  left: 50%;
-  z-index: -1;
+.RegisterPage, .LoginPage {
+  .ResName {
+    position: absolute;
+    font-family: $main_font_family;
+    font-size: 300px;
+    color: $main_color;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    transform: translate(-50%, -50%) rotateZ(30deg);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
     @media (max-width: 991px) {
-        font-size: 250px;
+      font-size: 250px;
     }
-  @media (max-width: 768px) {
-    font-size: 200px;
-  }
-  @media (max-width: 554px) {
-    font-size: 160px;
-  }
+    @media (max-width: 768px) {
+      font-size: 200px;
+    }
+    @media (max-width: 554px) {
+      font-size: 160px;
+    }
 
+  }
 }
 .Register , .Login {
   width: 500px;

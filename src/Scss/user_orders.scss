@@ -1,0 +1,188 @@
+@use "variables" as *;
+
+.UserOrdersPage {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+
+  .PageTitle {
+    h1 {
+      color: $second_color;
+      font-size: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      font-family: $main_font_family;
+      width: fit-content;
+      margin: 0 auto;
+      text-transform: uppercase;
+    }
+  }
+
+  .Controllers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+.Text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $second_color;
+  font-family: $roboto_font_family;
+    }
+    .Filter {
+      select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+          border-color: $second_color;
+        }
+        option {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .OrdersTable {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+    }
+.OrderTotalPrice{
+  font-family: $main_font_family;
+  color:$main_color;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+    .completed {
+      color: green;
+      font-weight: bold;
+    }
+
+    .pending {
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  .ViewDetails {
+    padding: 6px 12px;
+    background-color: $second_color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: #cc5500;
+    }
+  }
+}
+
+.OrderDetailsContainer {
+  position: relative;
+  //height: 100vh; // Make sure it takes the full screen height
+}
+
+.OrderItemsModal {
+  position: fixed; // Fixed positioning for centering
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); // Center the modal
+  //transform: translateX(-50%);
+  //transform: translateY(-50%);
+  background: white;
+  width: 600px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .ModalContent {
+    text-align: center;
+    width: 100%;
+
+    h2 {
+      font-size: 22px;
+      color: $second_color;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-height: 250px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      background: #f9f9f9;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      strong {
+        font-weight: bold;
+        color: $main_color;
+        font-family: $roboto_font_family;
+      }
+      span {
+        font-family: $main_font_family;
+      }
+    }
+  }
+
+  .CloseButton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: $second_color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: #cc5500;
+    }
+  }
+}
+
+
+.Overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  position: fixed;
+}

@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.SideBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: #f4f4f4;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 40000;
+  text-align: center;
+  padding: 20px;
+}
+.SideBarContainer .SideBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.SideBarContainer .SideBar .ResName {
+  font-family: "Dancing Script", cursive;
+  color: #ff6600;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.SideBarContainer .SideBar .UserName {
+  font-family: "Roboto", sans-serif;
+  color: #ffbe33;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.SideBarContainer .SideBar .UserLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+.SideBarContainer .SideBar .UserLinks a {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 12px;
+  display: block;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.SideBarContainer .SideBar .UserLinks a:hover {
+  background: rgba(255, 102, 0, 0.2);
+  color: #ffbe33;
+}
+.SideBarContainer .SideBar .UserLinks a.active {
+  color: white;
+  background: #ffbe33;
+  position: relative;
+  font-weight: bold;
+}
+.SideBarContainer .SideBar .UserLinks a.active::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+}
+.SideBarContainer .SideBar .Actions {
+  position: absolute;
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.SideBarContainer .SideBar .Actions a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  text-align: center;
+  color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  gap: 10px;
+}
+.SideBarContainer .SideBar .Actions a:hover {
+  background: rgba(255, 102, 0, 0.2);
+  color: #ffbe33;
+}
+.SideBarContainer .SideBar .Actions button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  text-align: center;
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.SideBarContainer .SideBar .Actions button:hover {
+  background: rgba(255, 102, 0, 0.2);
+}

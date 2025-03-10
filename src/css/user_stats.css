@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.UserStatsPage {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  color: #333;
+  /* Title for the page */
+  /* Wrapper for the stats cards */
+  /* Responsive Design */
+}
+.UserStatsPage .PageTitle h1 {
+  font-size: 2.5rem;
+  color: #ff6600;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto 35px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.UserStatsPage .stats {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /* Each individual stat card */
+  /* Food Card Styling */
+  /* Shiny hover effect for food images */
+}
+.UserStatsPage .stats .stat-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.UserStatsPage .stats .stat-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+.UserStatsPage .stats .stat-card .stat-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  /* Styling for the span (emoji) */
+}
+.UserStatsPage .stats .stat-card .stat-title .Tit {
+  background: linear-gradient(45deg, #ff6600, #ff9966);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+}
+.UserStatsPage .stats .stat-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.UserStatsPage .stats .stat-card h3 {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  font-family: "Dancing Script", cursive;
+  color: #ffbe33;
+  text-transform: uppercase;
+}
+.UserStatsPage .stats .stat-card div {
+  margin-top: 10px;
+}
+.UserStatsPage .stats .food-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.UserStatsPage .stats .food-info .food-image {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ff6600;
+  margin-bottom: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.UserStatsPage .stats .food-info .food-image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.UserStatsPage .stats .food-info .food-name {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.UserStatsPage .stats .food-info:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .UserStatsPage .stats {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.Strong {
+  font-family: "Dancing Script", cursive;
+  color: #ffbe33;
+  font-size: 1.2rem;
+}

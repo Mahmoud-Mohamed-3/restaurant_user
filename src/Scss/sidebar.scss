@@ -1,0 +1,125 @@
+@use "variables" as *;
+
+.SideBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: #f4f4f4;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 40000;
+  text-align: center;
+  padding: 20px;
+
+  .SideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ResName {
+      font-family: $main_font_family;
+      color: $second_color;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .UserName {
+      font-family: $roboto_font_family;
+      color: $main_color;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+
+    }
+
+    .UserLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+
+      a {
+        font-family: $roboto_font_family;
+        color: #333;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 12px;
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 102, 0, 0.2);
+          color: $main_color;
+        }
+
+        &.active {
+          color: white;
+          background: $main_color;
+          position: relative;
+          font-weight: bold;
+
+          &::before {
+            content: "";
+            width: 5px;
+            height: 100%;
+            background: white;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+
+    .Actions {
+      position: absolute;
+      bottom: 50px;
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      a {
+        font-family: $roboto_font_family;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 12px;
+        border-radius: 5px;
+        transition: 0.3s ease;
+        text-align: center;
+        color: #333;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        gap: 10px;
+        &:hover {
+          background: rgba(255, 102, 0, 0.2);
+          color: $main_color;
+        }
+      }
+      button {
+        font-family: $roboto_font_family;
+        font-size: 1.2rem;
+        padding: 12px;
+        border-radius: 5px;
+        transition: 0.3s ease;
+        text-align: center;
+        color: red;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        gap: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background: rgba(255, 102, 0, 0.2);
+        }
+      }
+    }
+  }
+}

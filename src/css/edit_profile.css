@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.edit-profile-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  position: relative;
+  height: calc(100vh - 60px);
+}
+
+.page-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.page-title h1 {
+  font-size: 2.4rem;
+  color: #ff6600;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+.user-details {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.user-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+.user-field label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+.user-field input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.user-field input:focus {
+  border-color: #ffbe33;
+}
+.user-field input[disabled] {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.password-change-form {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.password-change-form .user-field {
+  margin-bottom: 20px;
+}
+
+button.update-profile-button {
+  padding: 12px 20px;
+  background-color: #ffbe33;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+button.update-profile-button:hover {
+  background-color: #ffae00;
+}
+
+a.change-password-link,
+a.back-to-profile-link {
+  color: #ffbe33;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a.change-password-link:hover,
+a.back-to-profile-link:hover {
+  color: #ffae00;
+}
+
+.link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-container input {
+  width: 100%; /* Ensures the input field takes the full width */
+  padding-right: 30px; /* Adds space for the icon */
+}
+
+.password-icon {
+  position: absolute;
+  right: 10px; /* Adjust the position of the icon */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10; /* Ensure the icon appears on top of the input */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.delete-account-button {
+  position: absolute;
+  bottom: 50px;
+  padding: 12px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+.delete-account-button:hover {
+  background-color: #cc0000;
+}

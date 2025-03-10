@@ -1,0 +1,162 @@
+@use 'variables' as *;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.edit-profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  height: calc(100vh - 60px);
+}
+
+.page-title {
+  margin-bottom: 30px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.4rem;
+    color: $second_color;
+    font-family: $main_font_family;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: fit-content;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+  }
+}
+
+.user-details {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.user-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: $main_color;
+    }
+
+    &[disabled] {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.password-change-form {
+  //background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+  .user-field {
+    margin-bottom: 20px;
+  }
+}
+
+button.update-profile-button {
+  padding: 12px 20px;
+  background-color: $main_color;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+
+  &:hover {
+    background-color: darken($main_color, 10%);
+  }
+}
+
+a.change-password-link,
+a.back-to-profile-link {
+  color: $main_color;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($main_color, 10%);
+  }
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-container input {
+  width: 100%; /* Ensures the input field takes the full width */
+  padding-right: 30px; /* Adds space for the icon */
+}
+
+.password-icon {
+  position: absolute;
+  right: 10px; /* Adjust the position of the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10; /* Ensure the icon appears on top of the input */
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+.delete-account-button{
+  position: absolute;
+    bottom: 50px;
+    padding: 12px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    //width: 100px;
+
+    &:hover {
+        background-color: darken(red, 10%);
+    }
+}
+

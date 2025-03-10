@@ -24,7 +24,7 @@
   position: relative;
 }
 
-.ResName {
+.RegisterPage .ResName, .LoginPage .ResName {
   position: absolute;
   font-family: "Dancing Script", cursive;
   font-size: 300px;
@@ -39,17 +39,17 @@
   z-index: -1;
 }
 @media (max-width: 991px) {
-  .ResName {
+  .RegisterPage .ResName, .LoginPage .ResName {
     font-size: 250px;
   }
 }
 @media (max-width: 768px) {
-  .ResName {
+  .RegisterPage .ResName, .LoginPage .ResName {
     font-size: 200px;
   }
 }
 @media (max-width: 554px) {
-  .ResName {
+  .RegisterPage .ResName, .LoginPage .ResName {
     font-size: 160px;
   }
 }

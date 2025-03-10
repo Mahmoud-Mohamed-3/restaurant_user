@@ -1,0 +1,120 @@
+@use "variables" as *;
+.UserReservationsPage {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  .PageTitle {
+    text-align: center;
+    h1 {
+      color: $second_color; /* Assuming second_color is orange */
+      font-size: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      font-family: $main_font_family;
+      text-transform: uppercase;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+  .Controllers {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row-reverse;
+
+    .ReservationsCount {
+      text-align: right;
+      //margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: $main_color;
+      font-family: $roboto_font_family;
+    }
+  }
+}
+
+
+.Filter {
+  margin: 20px 0;
+  text-align: right;
+
+  &:focus {
+    border-color: #ff6600;
+  }
+}
+
+.Filter select {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+
+}
+
+
+
+
+
+.ReservationsTable {
+  margin-top: 20px;
+  overflow-x: auto;
+  transition: transform 0.3s ease;
+}
+
+.ReservationsTable:hover {
+  transform: scale(1.02);
+}
+
+.ReservationsTable table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+//.ReservationsTable table:hover {
+//  transform: scale(1.02);
+//}
+
+.ReservationsTable th,
+.ReservationsTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.TableName {
+  font-family: $main_font_family;
+  color: $second_color;
+  font-size: 1.4rem;
+}
+.BookedFrom{
+  font-family: $main_font_family;
+  color: green;
+  font-size: 1.2rem;
+}
+.BookedTo{
+  font-family: $main_font_family;
+  color: red;
+  font-size: 1.2rem;
+}
+.ReservationsTable th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.ReservationsTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ReservationsTable tr:hover {
+  background-color: #e2e2e2;
+}
+
+.ReservationsTable {
+  max-height: 400px; /* Set max height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}

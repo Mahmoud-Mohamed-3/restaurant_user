@@ -132,18 +132,47 @@ export default function BookTable() {
               disabledDate={(current) =>
                 current && current.isBefore(dayjs().startOf("day"))
               }
-              onChange={setBookingFrom}
+              disabledTime={(date) => {
+                if (!date || date.isAfter(dayjs(), "day")) return {}; // Allow future days
+                return {
+                  disabledHours: () => [...Array(dayjs().hour()).keys()], // Disable past hours of today
+                  disabledMinutes: (hour) =>
+                    hour === dayjs().hour()
+                      ? [...Array(dayjs().minute()).keys()]
+                      : [], // Disable past minutes in the current hour
+                };
+              }}
+              onChange={(value) => {
+                setBookingFrom(value);
+                if (bookingTo && value && bookingTo.isBefore(value)) {
+                  setBookingTo(null); // Reset "Booking To" if it's invalid
+                }
+              }}
             />
+
             <DatePicker
               showTime
               format="YYYY-MM-DD HH:mm"
               placeholder="Booking To"
               disabledDate={(current) =>
-                // Do not disable the entire day, only times before bookingFrom
-                bookingFrom && current.isBefore(bookingFrom.startOf("minute"))
+                current && current.isBefore(dayjs().startOf("day"))
               }
+              disabledTime={(date) => {
+                if (!date || !bookingFrom) return {};
+                if (date.isSame(bookingFrom, "day")) {
+                  return {
+                    disabledHours: () => [...Array(bookingFrom.hour()).keys()], // Disable hours before "Booking From"
+                    disabledMinutes: (hour) =>
+                      hour === bookingFrom.hour()
+                        ? [...Array(bookingFrom.minute()).keys()]
+                        : [], // Disable minutes before "Booking From"
+                  };
+                }
+                return {};
+              }}
               onChange={setBookingTo}
             />
+
             <Button type="primary" onClick={handleSubmit}>
               Confirm Booking
             </Button>

@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.UserOrdersPage {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+.UserOrdersPage .PageTitle h1 {
+  color: #ff6600;
+  font-size: 2rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.UserOrdersPage .Controllers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+.UserOrdersPage .Controllers .Text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ff6600;
+  font-family: "Roboto", sans-serif;
+}
+.UserOrdersPage .Controllers .Filter select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.UserOrdersPage .Controllers .Filter select:focus {
+  outline: none;
+  border-color: #ff6600;
+}
+.UserOrdersPage .Controllers .Filter select option {
+  cursor: pointer;
+}
+.UserOrdersPage .OrdersTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.UserOrdersPage .OrdersTable table th,
+.UserOrdersPage .OrdersTable table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.UserOrdersPage .OrdersTable .OrderTotalPrice {
+  font-family: "Dancing Script", cursive;
+  color: #ffbe33;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.UserOrdersPage .OrdersTable .completed {
+  color: green;
+  font-weight: bold;
+}
+.UserOrdersPage .OrdersTable .pending {
+  color: red;
+  font-weight: bold;
+}
+.UserOrdersPage .ViewDetails {
+  padding: 6px 12px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.UserOrdersPage .ViewDetails:hover {
+  background-color: #cc5500;
+}
+
+.OrderDetailsContainer {
+  position: relative;
+}
+
+.OrderItemsModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  width: 600px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.OrderItemsModal .ModalContent {
+  text-align: center;
+  width: 100%;
+}
+.OrderItemsModal .ModalContent h2 {
+  font-size: 22px;
+  color: #ff6600;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.OrderItemsModal .ModalContent ul {
+  list-style: none;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.OrderItemsModal .ModalContent li {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.OrderItemsModal .ModalContent li strong {
+  font-weight: bold;
+  color: #ffbe33;
+  font-family: "Roboto", sans-serif;
+}
+.OrderItemsModal .ModalContent li span {
+  font-family: "Dancing Script", cursive;
+}
+.OrderItemsModal .CloseButton {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.OrderItemsModal .CloseButton:hover {
+  background: #cc5500;
+}
+
+.Overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  position: fixed;
+}
